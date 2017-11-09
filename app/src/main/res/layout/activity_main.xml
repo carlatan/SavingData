@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tan.savingdata.MainActivity">
+
+    <EditText
+        android:id="@+id/edit_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btn_intcache"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="saveInternalCache"
+        android:text="Internal Cache" />
+
+    <Button
+        android:id="@+id/btn_extstor"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:onClick="saveExternalStorage"
+        android:text="External Storage"
+        android:layout_below="@+id/btn_extcache"
+        android:layout_alignLeft="@+id/btn_extcache"
+        android:layout_alignStart="@+id/btn_extcache" />
+
+    <Button
+        android:id="@+id/btn_extpub"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:onClick="saveExternalPublic"
+        android:text="External Public"
+        android:layout_below="@+id/btn_extstor"
+        android:layout_alignLeft="@+id/btn_extstor"
+        android:layout_alignStart="@+id/btn_extstor" />
+
+    <Button
+        android:id="@+id/btn_extcache"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_intcache"
+        android:onClick="saveExternalCache"
+        android:text="External Cache" />
+
+    <Button
+        android:id="@+id/btn_shared"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_intstor"
+        android:layout_centerHorizontal="true"
+        android:onClick="savePreference"
+        android:text="Shared Preferences" />
+
+
+    <Button
+        android:id="@+id/btn_intstor"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_intcache"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveIntStorage"
+        android:text="Internal Storage" />
+
+
+
+    <EditText
+        android:id="@+id/edit_filename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/edit_data"
+        android:layout_alignLeft="@+id/edit_data"
+        android:layout_alignStart="@+id/edit_data" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filename:"
+        android:layout_alignBaseline="@+id/edit_filename"
+        android:layout_alignBottom="@+id/edit_filename"
+        android:layout_toLeftOf="@+id/edit_filename"
+        android:layout_toStartOf="@+id/edit_filename" />
+
+    <TextView
+        android:id="@+id/text_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data: "
+        android:layout_above="@+id/edit_filename"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:onClick="callSecondActivity"
+        android:text="Next"
+        android:layout_below="@+id/btn_extpub"
+        android:layout_alignLeft="@+id/btn_extpub"
+        android:layout_alignStart="@+id/btn_extpub" />
+
+</RelativeLayout>
